@@ -14,3 +14,8 @@ describe:
 explore:
 	python src/python/analyze_ad.py \
 		--sql "SELECT Label, COUNT(*) FROM criteo_ad GROUP BY Label ORDER BY Label"
+
+train:
+	python src/python/train_xgb_baseline.py \
+	  --sample-frac 1.0 \
+	  --max-rows 200000
