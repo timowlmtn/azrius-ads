@@ -21,3 +21,11 @@ train:
 	  --sample-frac 1.0 \
 	  --max-rows 200000 \
 	  --submission-path data/$(RUN_VAR).csv
+
+gb:
+	python src/python/growthbook/simple_experiment.py
+
+gb-describe:
+	curl -X GET "http://localhost:3100/api/v1/features/button-color-feature" \
+		  -u ${GB_API_KEY} \
+		  -H "Content-Type: application/json"

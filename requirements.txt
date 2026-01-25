@@ -1,3 +1,4 @@
 pyiceberg
 pyiceberg[hive,pyarrow]
 duckdb
+growthbook
