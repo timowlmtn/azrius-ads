@@ -79,5 +79,5 @@ def run_for_user(user_id: str) -> str:
 # -------------------------------------------------------------------
 # Simulate many requests
 # -------------------------------------------------------------------
-counts = Counter(run_for_user(str(i)) for i in range(1, 501))
+counts = Counter(run_for_user(f"experiment-{str(i)}") for i in range(1, 501))
 logger.info("FINAL COUNTS: %s", dict(counts))
